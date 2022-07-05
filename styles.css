@@ -1,0 +1,77 @@
+* {
+  font-family: "Lexend";
+  scroll-behavior: smooth;
+
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f8f6f6;
+  color: #212121;
+
+  height: 100vh;
+}
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+
+  height: 30px;
+  width: 100%;
+  padding: 20px 10px;
+}
+h2 {
+  padding: 10px;
+}
+i {
+  font-size: 24px;
+  padding: 10px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+
+  width: 50%;
+}
+nav ul li a {
+  text-decoration: none;
+
+  color: #212121;
+  margin-left: 20px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.box {
+  -webkit-transition-property: box-shadow, trnasform;
+  transition-property: box-shadow, transform;
+  cursor: pointer;
+
+  background-color: #c4c4c4;
+  -webkit-animation: 0.8s;
+  width: 380px;
+  height: 260px;
+  transition: 0.8s;
+}
+.box:hover,
+.box:focus,
+.box:active {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+  margin: 20px;
+  padding: 20px;
+}

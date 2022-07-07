@@ -7,8 +7,8 @@
 }
 body {
   background-color: #f8f6f6;
-  color: #212121;
 
+  color: #212121;
   height: 100vh;
 }
 header {
@@ -57,7 +57,7 @@ nav ul li a {
   background-color: #c4c4c4;
   -webkit-animation: 0.8s;
   width: 380px;
-  height: 260px;
+  height: 280px;
   transition: 0.8s;
 }
 .box:hover,
@@ -67,11 +67,26 @@ nav ul li a {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
 }
+img {
+  width: 380px;
+  height: 280px;
+}
 .content {
-  display: flex;
   text-align: center;
   justify-content: center;
 
   margin: 20px;
   padding: 20px;
+}
+p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2%;
+}
+h6 {
+  letter-spacing: -2%;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }

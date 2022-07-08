@@ -1,15 +1,15 @@
-const toggle = document.getElementById('toggleDark')
-const body = document.querySelector('body')
+const body = document.querySelector("body")
+const toggle = document.querySelector(".toggle")
 
-toggle.addEventListener('click', function() {
-    this.classList.toggle('bi-moon')
-    if(this.classList.toggle('bi-brightness-low')) {
-        body.style.background = '#f8f6f6'
-        body.style.color = '#212121'
-        body.style.transition = '1s'
-    } else {
-        body.style.background = '#080210'
-        body.style.color = '#f8f6f6'
-        body.style.transition = '1s'
-    }
-})
+toggle.onclick = function(){
+    body.classList.toggle("dark")
+}
+
+// gsap.registerPlugin(scrollSmoother)
+
+// let smoother = scrollSmoother({
+//     wrapper: "#smooth-wrapper",
+//     content: "#smooth-wrapper",
+//     effects: true,
+//     smooth: 2
+// })

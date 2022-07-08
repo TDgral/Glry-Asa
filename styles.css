@@ -61,7 +61,8 @@ nav ul li a {
   text-decoration: none;
 
   color: var(--text-color);
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   transition: 0.8s;
 }
 .container {

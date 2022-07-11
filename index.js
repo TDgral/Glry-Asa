@@ -1,9 +1,17 @@
 const body = document.querySelector("body")
-const toggle = document.querySelector(".toggle")
+const dk = document.querySelector(".toggle")
+const btnMobile = document.getElementById('btn-mobile')
 
-toggle.onclick = function(){
+function toggleMenu(){
+    const nav = document.getElementById('nav')
+    nav.classList.toggle('active')
+}
+
+dk.onclick = function() {
     body.classList.toggle("dark")
 }
+
+btnMobile.addEventListener('click', toggleMenu)
 
 // gsap.registerPlugin(scrollSmoother)
 

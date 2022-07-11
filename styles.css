@@ -13,73 +13,99 @@ body.dark {
 
   margin: 0;
   padding: 0;
+  transition: 0.8s;
 }
 body {
   background-color: var(--body-color);
 
-  color: var(--text-color);
-  transition: 0.8s;
   height: 100vh;
 }
-header {
-  position: fixed;
+#header {
   display: flex;
+  position: sticky;
+  align-items: center;
+  box-sizing: border-box;
   justify-content: space-between;
+  background-color: var(--body-color);
 
-  height: 30px;
-  width: 100%;
-  padding: 20px 10px;
+  top: 0;
+  height: 70px;
+  padding: 20px;
 }
 h2 {
-  margin-left: 10px;
+  color: var(--text-color);
+
+  font-weight: 600;
+  letter-spacing: -3%;
+}
+#btn-mobile {
+  display: none;
+  color: var(--text-color);
+}
+#menu {
+  display: flex;
+  list-style: none;
+  overflow: visible;
+  text-align: center;
+  visibility: visible;
+  text-decoration: none;
+  justify-content: center;
+
+  gap: 50px;
+  font-size: 16px;
 }
 .toggle {
-  position: relative;
   cursor: pointer;
+  text-align: center;
+  position: relative;
+  color: var(--text-color);
 
+  width: 24px;
+  width: 100%;
+  height: 24px;
   font-size: 24px;
-  margin-right: 30px;
 }
 .toggle::before {
-  font-family: "Bootstrap-icons";
   content: "\F1D4";
+  font-family: "Bootstrap-icons";
 }
 body.dark .toggle::before {
   content: "\F497";
 }
-.nav {
-  display: none;
-}
-nav ul {
-  display: flex;
-  list-style: none;
-  justify-content: space-evenly;
-
-  width: 50%;
-}
-nav ul li a {
+#menu a {
+  display: block;
   text-decoration: none;
-
   color: var(--text-color);
-  margin-left: 20px;
-  transition: 0.8s;
+
+  padding: 5px 10px;
+}
+h3 {
+  text-align: center;
+  justify-items: center;
+  color: var(--text-color);
 }
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.container-1 {
+  display: flex;
+  align-items: center;
 
   width: 90vw;
   height: 100vh;
   margin: 0 auto;
 }
 .box {
+  display: flex;
   cursor: pointer;
-  transition-property: box-shadow, transform;
-  -webkit-transition-property: box-shadow, trnasform;
+  justify-content: space-between;
 
-  width: 380px;
-  height: 280px;
+  margin: 10px;
   transition: 0.8s;
 }
 .box:hover,
@@ -93,22 +119,95 @@ img {
   width: 380px;
   height: 280px;
 }
-.content {
-  text-align: center;
-  justify-content: center;
-
-  margin: 20px;
-  padding: 20px;
-}
 p {
+  text-align: center;
+  color: var(--text-color);
+
   font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 2%;
+  font-weight: 300;
 }
 h6 {
-  letter-spacing: -2%;
-  font-size: 20px;
-  font-weight: 600;
-  margin-top: 40px;
-  margin-bottom: 10px;
+  text-align: center;
+  color: var(--text-color);
+
+  margin-top: 20px;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  #header {
+    display: flex;
+    position: sticky;
+    background-color: var(--body-color);
+
+    top: 0;
+  }
+  #btn-mobile {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    background: none;
+
+    font-weight: 600;
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    overflow-y: hidden;
+    visibility: hidden;
+
+    right: 0;
+    height: 0;
+    top: 70px;
+    width: 100%;
+    z-index: 1000;
+    transition: 0.8s;
+    background-color: var(--body-color);
+  }
+  #nav.active #menu {
+    height: 40vh;
+    visibility: visible;
+  }
+  #menu a {
+    margin: 0 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--text-color);
+  }
+  #hamburger {
+    text-align: center;
+    font-family: "Bootstrap-icons";
+
+    font-size: 16px;
+    margin-left: 5px;
+    transition: 0.8s;
+  }
+  #hamburger::before {
+    content: "\F479";
+  }
+  #nav.active #hamburger::before {
+    content: "\F659";
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+  }
+  .container-1 {
+    display: flex;
+
+    width: 100vw;
+    height: 100vh;
+  }
+  .box {
+    display: flex;
+    justify-content: center;
+  }
+  img {
+    width: 340px;
+    height: 240px;
+  }
+  p {
+    margin: 12px;
+  }
 }

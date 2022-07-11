@@ -26,7 +26,9 @@ body {
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
+  background-color: var(--body-color);
 
+  top: 0;
   height: 70px;
   padding: 20px;
 }
@@ -53,13 +55,15 @@ h2 {
   font-size: 16px;
 }
 .toggle {
-  color: var(--text-color);
-  position: relative;
   cursor: pointer;
+  text-align: center;
+  position: relative;
+  color: var(--text-color);
 
-  font-size: 24px;
   width: 24px;
+  width: 100%;
   height: 24px;
+  font-size: 24px;
 }
 .toggle::before {
   content: "\F1D4";
@@ -81,6 +85,14 @@ h3 {
   color: var(--text-color);
 }
 .container {
+  display: flex;
+  align-items: center;
+
+  width: 90vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+.container-1 {
   display: flex;
   align-items: center;
 
@@ -122,6 +134,13 @@ h6 {
   font-size: 16px;
 }
 @media (max-width: 768px) {
+  #header {
+    display: flex;
+    position: sticky;
+    background-color: var(--body-color);
+
+    top: 0;
+  }
   #btn-mobile {
     display: flex;
     border: none;
@@ -142,7 +161,7 @@ h6 {
     width: 100%;
     z-index: 1000;
     transition: 0.8s;
-    background-color: #f8f6f6;
+    background-color: var(--body-color);
   }
   #nav.active #menu {
     height: 40vh;
@@ -151,7 +170,7 @@ h6 {
   #menu a {
     margin: 0 1rem;
     padding: 1rem 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--text-color);
   }
   #hamburger {
     text-align: center;
@@ -174,12 +193,11 @@ h6 {
     width: 100vw;
     height: 100vh;
   }
-  p {
+  .container-1 {
     display: flex;
-    text-align: center;
-    justify-items: center;
 
-    margin-top: 50px;
+    width: 100vw;
+    height: 100vh;
   }
   .box {
     display: flex;
@@ -188,5 +206,8 @@ h6 {
   img {
     width: 340px;
     height: 240px;
+  }
+  p {
+    margin: 12px;
   }
 }

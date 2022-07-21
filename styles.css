@@ -29,6 +29,7 @@ body {
   background-color: var(--body-color);
 
   top: 0;
+  z-index: 2;
   height: 70px;
   padding: 20px;
 }
@@ -137,7 +138,7 @@ h6 {
   #header {
     display: flex;
     position: sticky;
-    background-color: var(--body-color);
+    z-index: 2;
 
     top: 0;
   }
